@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MySystemDemoGraphForMe</string>
+    <string name="title_activity_choose_transport_type">ChooseTransportType</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="map_header_parameter">Authorization</string>
+    <string name="json_status">status</string>
+    <string name="email">Email</string>
+    <string name="register_first_name">First Name</string>
+    <string name="register_last_name">Last Name</string>
+    <string name="register_phone_number">Phone Number</string>
+    <string name="register_address">Address</string>
+    <string name="register_password">Password</string>
+    <string name="register_re_password">Re enter password</string>
+</resources>
