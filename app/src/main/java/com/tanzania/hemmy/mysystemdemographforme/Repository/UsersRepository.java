@@ -31,14 +31,14 @@ public class UsersRepository {
     TokenDao tokenDao;
     UsersDao usersDao;
     MsafiriDatabase msafiriDatabase;
-    UsersRepository(Context context){
+    public UsersRepository(Context context){
         this.context = context;
         msafiriDatabase = MsafiriDatabase.getDatabase(context);
         tokenDao = msafiriDatabase.TokenDao();
         usersDao = msafiriDatabase.UsersDao();
     }
 
-    private void loginToSystem(final String username, final String password){
+    public void loginToSystem(final String username, final String password){
         String cancelTag = "TextToCancledRequest";
         String url = BusApi.loginToSystem;
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {

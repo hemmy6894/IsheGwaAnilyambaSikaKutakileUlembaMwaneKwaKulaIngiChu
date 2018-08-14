@@ -35,6 +35,7 @@ public class StartingActivity extends AppCompatActivity {
                     Token token[] = tokenDao.getCustomer(false);
                     if(token.length < 1){
                         Log.e("TokenDb","Users is loged out");
+                        isLogedOn = true;
                     }else{
                         String[] statuses = new String[]{"on_hold","history","ticket"};
                         for(String status : statuses ){
@@ -42,7 +43,6 @@ public class StartingActivity extends AppCompatActivity {
                             repoHis.loadHistoryData(status);
                         }
                         Log.e("TokenDb","Users is logged in");
-                        isLogedOn = true;
                     }
 
                     sleep(6000);

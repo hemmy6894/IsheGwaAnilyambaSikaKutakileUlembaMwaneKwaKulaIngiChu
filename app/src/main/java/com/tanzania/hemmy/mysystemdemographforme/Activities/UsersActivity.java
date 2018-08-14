@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.tanzania.hemmy.mysystemdemographforme.R;
+import com.tanzania.hemmy.mysystemdemographforme.Repository.UsersRepository;
 
 public class UsersActivity extends AppCompatActivity{
     EditText  username, password;
@@ -26,7 +27,8 @@ public class UsersActivity extends AppCompatActivity{
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                UsersRepository repository = new UsersRepository(getApplicationContext());
+                repository.loginToSystem(username.getText().toString(),password.getText().toString());
             }
         });
     }
