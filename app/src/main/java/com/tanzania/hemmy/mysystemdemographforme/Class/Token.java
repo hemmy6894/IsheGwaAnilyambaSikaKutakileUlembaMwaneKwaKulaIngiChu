@@ -8,19 +8,19 @@ import android.support.annotation.NonNull;
 public class Token {
     @PrimaryKey
     @NonNull
-    private Long id;
+    private String id;
     private String token;
     private boolean isExpired;
     private Long expiredTime;
 
-    public Token(Long id, String token, boolean isExpired, Long expiredTime) {
+    public Token(String id, String token, boolean isExpired, Long expiredTime) {
         this.id = id;
         this.token = token;
         this.isExpired = isExpired;
         this.expiredTime = expiredTime;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 

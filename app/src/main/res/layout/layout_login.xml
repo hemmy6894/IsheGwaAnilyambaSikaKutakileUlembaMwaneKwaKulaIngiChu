@@ -9,133 +9,22 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/bg_white_round"
-            android:alpha="0.75"
-            android:layout_margin="20dp"
-            android:paddingBottom="20dp">
-            <include layout="@layout/include_auth_header"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dip"
-                    android:layout_weight="0.4"
-                    android:background="#000"
-                    android:layout_margin="13dp"
-                    android:alpha="0.2"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SIGN IN"
-                    android:textColor="#000"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dip"
-                    android:alpha="0.2"
-                    android:layout_weight="0.4"
-                    android:background="#000"
-                    android:layout_margin="13dp"/>
-            </LinearLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:textAppearance="@style/MyAppearance"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/msafiri_app_color_blue"
-                    android:padding="10dp"
-                    android:drawableRight="@mipmap/ico_email"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:hint="@string/email"
-                    android:textColor="#6FB7B0"
-                    android:inputType="textEmailAddress"
-                    android:id="@+id/layout_login_edittext_enter_email"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:backgroundTint="@color/msafiri_app_color_blue"
-                    android:padding="10dp"
-                    android:hint="Password"
-                    android:drawableRight="@mipmap/ico_lock"
-                    android:inputType="textPassword"
-                    android:textColor="#6FB7B0"
-                    android:id="@+id/layout_login_edittext_enter_password"/>
-            </android.support.design.widget.TextInputLayout>
-
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/progress_bar"
-                android:visibility="gone"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/layout_login_hidden_sms"
-                android:textColor="#000"
-                android:visibility="gone"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:background="@drawable/bg_blue_round"
-                android:textColor="#fff"
-                android:text="Login"
-                android:textStyle="bold"
-                android:id="@+id/layout_login_button_login"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="Forget password?"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:gravity="center"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:alpha="0.2"
-                android:background="#000"
-                android:layout_margin="13dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Please register"
-                    android:textColor="@color/msafiri_app_color_blue"
-                    android:id="@+id/layout_login_button_regiter"/>
-            </LinearLayout>
-        </LinearLayout>
+            android:hint="Username"
+            android:id="@+id/username"
+            android:inputType="text" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/password"
+            android:inputType="textPassword" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/button_save"/>
     </ScrollView>
 </LinearLayout>

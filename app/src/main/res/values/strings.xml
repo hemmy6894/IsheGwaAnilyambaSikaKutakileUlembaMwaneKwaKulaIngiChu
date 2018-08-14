@@ -1,14 +1,11 @@
 <resources>
-    <string name="app_name">MySystemDemoGraphForMe</string>
     <string name="title_activity_choose_transport_type">ChooseTransportType</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">@string/app_name</string>
+    <string name="nav_header_subtitle">hemmyCoder@m-safariapp.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="map_header_parameter">Authorization</string>
-    <string name="json_status">status</string>
     <string name="email">Email</string>
     <string name="register_first_name">First Name</string>
     <string name="register_last_name">Last Name</string>
@@ -16,4 +13,95 @@
     <string name="register_address">Address</string>
     <string name="register_password">Password</string>
     <string name="register_re_password">Re enter password</string>
+
+        <string name="app_name">M-safari App</string>
+        <string name="title_activity_main">MainActivity</string>
+        <string name="title_home">Home</string>
+        <string name="title_bus_ticket">Buses</string>
+        <string name="title_ship_ticket">Ship</string>
+        <string name="title_train_ticket">Train</string>
+
+
+
+        //////Shared preference resource section
+        <string name="shared_preference_route_info">routeInfo</string>
+        <string name="day_of_month">day_of_month</string>
+        <string name="day_of_week">day_of_week</string>
+        <string name="year">year</string>
+        <string name="month">month</string>
+        <string name="from">from</string>
+        <string name="to">to</string>
+
+        <string name="shared_preference_text_to_pay_for">shared_preference_text_to_pay_for</string>
+        <string name="shared_preference_route">RouteInformation</string>
+        <string name="shared_bus_name">bus_name</string>
+        <string name="shared_bus_id">bus_id</string>
+        <string name="shared_id">_id</string>
+        <string name="shared_left_seat">left_seat</string>
+        <string name="shared_right_seat">right_seat</string>
+        <string name="shared_model">model</string>
+        <string name="shared_phone_number">phone_no</string>
+        <string name="shared_total_buses">total_buses</string>
+        <string name="shared_company">company</string>
+        <string name="shared_profile">profile</string>
+        <string name="shared_bus_profile">bus_profile</string>
+        <string name="shared_company_name">company_name</string>
+        <string name="shared_website_url">website_url</string>
+        <string name="shared_discount">discount</string>
+        <string name="shared_tax">tax</string>
+        <string name="shared_session">period_session</string>
+        <string name="shared_sch_visible">sch_visible</string>
+        <string name="shared_min_booking_hrs">min_booking_hrs</string>
+        <string name="shared_estimated_time">estimated_time</string>
+        <string name="shared_sch_id">sch_id</string>
+        <string name="shared_bus_last_seat_filled">last_seat_filled</string>
+        <string name="shared_bus_driver_incharge">driver_incharge</string>
+        <string name="bus_max_seat_no">max_seat_no</string>
+        <string name="shared_processing_fee">processing_fee</string>
+        <string name="shared_phone">phone</string>
+        <string name="shared_help_line_no">help_line_no</string>
+        <string name="shared_bus_visible">bus_visible</string>
+        <string name="shared_visible">visible</string>
+        <string name="shared_departure_time">departure_time</string>
+        <string name="shared_arrival_time">arrival_time</string>
+        <string name="shared_fare">fare</string>
+        <string name="shared_seat_type">seat_type</string>
+        <string name="shared_token">token</string>
+        <string name="shared_customer_id">customer_id</string>
+        <string name="shared_company_id">company_id</string>
+
+        <string name="route_bus_sql_database_name">ROUTE_BUS</string>
+        <string name="shared_preference_booking_info">bookingInfo</string>
+        <string name="shared_preference_bus_data_from_id">BusDataFromId</string>
+
+
+        <string name="shared_preference_session">msafiriAppSession</string>
+        <string name="shared_first_name">first_name</string>
+        <string name="shared_last_name">last_name</string>
+        <string name="shared_email">email</string>
+        <string name="shared_gender">gender</string>
+        <string name="shared_address">address</string>
+        <string name="shared_role">role</string>
+        <string name="shared_phone_verified">phone_verified</string>
+
+
+
+        /// Parameters values
+
+        <string name="map_password">password</string>
+        <string name="map_email">email</string>
+        <string name="map_sch_date_id">sc_date_id</string>
+        <string name="map_booking_ref">booking_ref</string>
+        <string name="map_sch_pool_id">sc_pool_id</string>
+        <string name="map_header_parameter">Authorization</string>
+
+
+        /// JSON result keys
+
+        <string name="json_sch_information">sch_info</string>
+        <string name="json_bus_information">bus</string>
+        <string name="json_company_information">company</string>
+        <string name="json_dropping_point">dropping_point</string>
+        <string name="json_boarding_point">boarding_point</string>
+        <string name="json_status">status</string>
 </resources>
