@@ -18,6 +18,9 @@ public interface HistoryDao {
     @Query("SELECT * FROM history WHERE state =:seatState")
     LiveData<List<History>> getHistory(String seatState);
 
+    @Query("SELECT  count(*) as counter")
+    int getHistoryCount();
+
     @Query("SELECT * FROM history WHERE state =:seatState AND seat_id =:seatId AND bus_id =:busId")
     LiveData<List<History>> getHistory(String seatState,String seatId, String busId);
 

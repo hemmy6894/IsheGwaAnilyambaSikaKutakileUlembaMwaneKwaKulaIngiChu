@@ -3,6 +3,7 @@ package com.tanzania.hemmy.mysystemdemographforme.Repository;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -41,9 +42,10 @@ public class UsersRepository {
     public void loginToSystem(final String username, final String password){
         String cancelTag = "TextToCancledRequest";
         String url = BusApi.loginToSystem;
-        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Log.e("jhajjhahjshhsjhsjsa","hh"+response);
                 try {
                     JSONObject loginJsonObject = new JSONObject(response);
                     boolean status = loginJsonObject.getBoolean(context.getString(R.string.json_status));
@@ -61,7 +63,6 @@ public class UsersRepository {
                         String role = userDetails.getString(context.getString(R.string.shared_role));
                         String customer_id = userDetails.getString(context.getString(R.string.shared_id));
                         String phone_no = userDetails.getString(context.getString(R.string.shared_phone_number));
-                        String __v = userDetails.getString("__v");
                         boolean phone_verified = userDetails.getBoolean(context.getString(R.string.shared_phone_verified));
                         Token token = new Token(customer_id,tokenDetails,false,(System.currentTimeMillis() + 10000));
                         Users users = new Users(
@@ -75,21 +76,21 @@ public class UsersRepository {
                                 String.valueOf(phone_verified),
                                 customer_id,
                                 phone_no,
-                                __v
+                                "00"
                         );
 
                         InsertOfflineDb offlineDb = new InsertOfflineDb(context,usersDao,tokenDao,users,token);
                         offlineDb.execute();
                     }
                 }catch (JSONException e){
-
+                    e.printStackTrace();
                 }
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                    error.printStackTrace();
             }
         }){
             @Override
@@ -97,13 +98,6 @@ public class UsersRepository {
                 Map<String, String> params = new HashMap<>();
                 params.put("email",username);
                 params.put("password",password);
-                return params;
-            }
-
-            @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put(context.getString(R.string.map_header_parameter),tokenDao.getToken(false));
                 return params;
             }
         };
